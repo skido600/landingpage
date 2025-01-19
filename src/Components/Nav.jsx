@@ -29,7 +29,7 @@ function Nav() {
               <div className="md:hidden" onClick={handle}>
                 <IoMdClose size={30} className="float-right " />
               </div>
-              <ul className="md:flex md:space-y-0 md:text-[14px] space-y-5 mt-8 text-[40px] items-center px-4 md:space-x-8 absolute md:relative">
+              <ul className="md:flex md:space-y-0 md:text-[14px] md:h-auto h-screen space-y-5 mt-8 text-[40px] items-center px-4 md:space-x-8 absolute md:relative">
                 <li>Home</li>
                 <li>Menu</li>
                 <li>About Us</li>
