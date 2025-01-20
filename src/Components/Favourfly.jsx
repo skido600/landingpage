@@ -3,7 +3,7 @@ import Btn from "./props/Btn";
 function Favourfly() {
   return (
     <>
-      <main className="mt-[8rem]">
+      <main className="mt-[3rem]">
         <section className="flex flex-col-reverse md:flex-row justify-between mx-4 gap-x-6 lg:gap-x-0 items-center">
           <div>
             <img src="/svg/fv.svg" alt="Flavourful" className="" />

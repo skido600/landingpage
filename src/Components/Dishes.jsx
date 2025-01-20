@@ -9,6 +9,8 @@ function Dishes() {
           <div>
             <article>
               <img src="/svg/ff.svg" alt="logo" />
+              <h1>Avacado Nacho</h1>
+              <p className="text-[#555555]">Description of the item</p>
             </article>
           </div>
         </section>
