@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         Prosto: ["Prosto One", "serif"],
         jost: ["Jost", "serif"],
+        inter: ["Inter", "serif"],
       },
       backgroundImage: {
         "nachos-bg": "url('/svg/pexels-willoworld-3768012.jpg') ",
