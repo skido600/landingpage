@@ -1,4 +1,7 @@
 import SvgIcons from "./Svg/SvgIcons";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import Last_Footer from "./Last_Footer";
 
 function Footer() {
   return (
@@ -41,18 +44,71 @@ function Footer() {
             <article className="div_4 text-[#555555] md:mb-0 mb-4">
               <ul className="md:space-y-5">
                 <li className="text-black font-inter font-[600]">Contact Us</li>
-                <li>ebisileonard@gmail.com</li>
-                <li>+234 906 584 9502</li>
-                <li>Social media</li>
-                <div className=" flex md:justify-start justify-center mt-4  gap-x-4">
-                  <SvgIcons type="insta" />
-                  <SvgIcons type="x" />
+                <li>
+                  {" "}
+                  <a href="mailto:ebisileonard@gmail.com">
+                    <div className="flex items-center  justify-center md:justify-start  ">
+                      <IoMdMail size={20} className="" />
+                      <span className="">Email@ebisileonard.com</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  {" "}
+                  <div className="flex items-center justify-center md:justify-start ">
+                    <FaWhatsapp size={20} />
+                    <a
+                      href="https://wa.me/2349065849502"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2"
+                    >
+                      <p className="">Whatsapp</p>
+                    </a>
+                  </div>
+                </li>
+                <li className="t">Social media</li>
+                <div className=" flex md:justify-start justify-center  mt-8 gap-x-4">
+                  <div className="flex items-center ">
+                    <a
+                      href="https://www.instagram.com/lwave1962/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2"
+                    >
+                      <SvgIcons type="insta" />
+                    </a>
+                  </div>
+
+                  <div className="flex items-center ">
+                    <a
+                      href="https://www.linkedin.com/in/leo-wave-309637239/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2"
+                    >
+                      <SvgIcons type="lINK" />
+                    </a>
+                  </div>
+                  <div className="flex items-center ">
+                    <a
+                      href="https://x.com/Momentum1962"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2"
+                    >
+                      <SvgIcons type="X" />
+                    </a>
+                  </div>
                 </div>
               </ul>
             </article>
           </footer>
         </section>
       </main>
+      <div>
+        <Last_Footer />
+      </div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const SvgIcons = ({ type }) => {
   switch (type) {
-    case "x":
+    case "lINK":
       return (
         <svg
           width="30"
@@ -33,32 +33,19 @@ const SvgIcons = ({ type }) => {
         </svg>
       );
 
-    case "linkdine":
+    case "X":
       return (
         <svg
           width="30"
-          height="30"
-          viewBox="0 0 30 30"
+          height="27"
+          viewBox="0 0 30 27"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <mask
-            id="mask0_38_11"
-            style="mask-type:luminance"
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="30"
-            height="30"
-          >
-            <path d="M0.461548 0H29.5385V29.0769H0.461548V0Z" fill="white" />
-          </mask>
-          <g mask="url(#mask0_38_11)">
-            <path
-              d="M23.3596 1.36255H27.8188L18.078 12.5239L29.5385 27.7145H20.5662L13.5337 18.5034L5.49601 27.7145H1.0327L11.4505 15.7722L0.461548 1.36463H9.66232L16.0094 9.7824L23.3596 1.36255ZM21.7915 25.0395H24.2631L8.31232 3.89847H5.66216L21.7915 25.0395Z"
-              fill="black"
-            />
-          </g>
+          <path
+            d="M23.3596 0.362549H27.8188L18.078 11.5239L29.5385 26.7145H20.5662L13.5337 17.5034L5.49601 26.7145H1.0327L11.4505 14.7722L0.461548 0.364626H9.66232L16.0094 8.7824L23.3596 0.362549ZM21.7915 24.0395H24.2631L8.31232 2.89847H5.66216L21.7915 24.0395Z"
+            fill="black"
+          />
         </svg>
       );
 

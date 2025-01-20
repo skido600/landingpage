@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 function Dishes() {
   const dishes = [
@@ -26,26 +25,24 @@ function Dishes() {
     },
   ];
 
-  const [sectionRef, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
-
   return (
     <main>
       <section className="px-5 mt-12">
         <h1 className="text-[#8F0000] text-[30px] lg:text-[60px] font-Prosto">
           Best Dishes From Our Menu
         </h1>
-        <div ref={sectionRef} className="grid md:grid-cols-3 space-y-4 gap-x-4">
-          {dishes.map((item, key) => (
+        <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 gap-x-4">
+          {dishes.map((item) => (
             <motion.article
-              whileHover={{ scale: 1.05 }} // Slight zoom on hover
-              whileTap={{ scale: 0.96 }} // Shrink slightly on tap
-              initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and slide up
-              animate={inView ? { opacity: 1, y: 0 } : {}} // Animate only when in view
-              transition={{ duration: 0.6, delay: key * 0.4 }} // Add delay for staggered animation
-              key={key}
+              whileHover={{
+                scale: 0.8,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{
+                scale: 0.8,
+                transition: { duration: 0.2 },
+              }}
+              key={item.title}
               className="bg-white px-4 py-6 rounded-lg shadow-lg"
             >
               <img src={item.img} alt={item.title} className="w-full mb-4" />
@@ -56,7 +53,7 @@ function Dishes() {
               <div className="flex justify-between items-center">
                 <p className="text-lg font-semibold">
                   <span>$</span>
-                  {item.price}
+                  {item.price.toFixed(2)}
                 </p>
                 <div className="flex items-center">
                   <img src="/svg/fi-sr-star.svg" className="w-4 mr-1" alt="" />
