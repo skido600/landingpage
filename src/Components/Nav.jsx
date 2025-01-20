@@ -18,7 +18,7 @@ function Nav() {
       <main>
         <nav>
           {/* desktop */}
-          <div className="flex justify-between items-center mx-[2rem] md:mx-[4rem]  ">
+          <div className="flex justify-between items-center mx-[2rem] mt-4 md:mt-0 md:mx-[4rem]  ">
             <div>
               <img
                 src="/svg/image-removebg-preview (47) 1.svg"
