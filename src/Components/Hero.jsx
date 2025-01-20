@@ -1,13 +1,26 @@
 import Btn from "./props/Btn";
-
-// import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Hero() {
+  const [sectionRef, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
     <>
       <main>
         <section className=" px-5 mt-[3rem] md:flex justify-between  items-center relative z-[1px]">
-          <article className="relative">
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: inView ? 1 : 0,
+              y: inView ? 0 : 20,
+            }}
+            ref={sectionRef}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <div className="order-2 md:order-1">
               <h1 className="text-[#8F0000] text-[30px] lg:text-[60px] font-Prosto">
                 Nachos are your best friend!
@@ -23,9 +36,18 @@ function Hero() {
               </button> */}
               <Btn />
             </div>
-          </article>
-          {/* <div className="bg-white w-[80%] z-[-1px]"></div> */}
-          <div className="bg-nachos-bg z-30 bg-no-repeat md:pr-3 lg:pr-0 md:w-[80%] rounded-[20px] mt-4 md:mt-0   bg-cover w-full  center-right-100 lg:h-[500px] h-[400px]"></div>
+          </motion.article>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: inView ? 1 : 0,
+              y: inView ? 0 : 20,
+            }}
+            ref={sectionRef}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="bg-nachos-bg z-30 bg-no-repeat md:pr-3 lg:pr-0 md:w-[80%] rounded-[20px] mt-4 md:mt-0   bg-cover w-full  center-right-100 lg:h-[500px] h-[400px]"
+          ></motion.div>
         </section>
       </main>
     </>
