@@ -23,7 +23,7 @@ function Footer() {
           </article>
           <footer className="md:grid grid-cols-3 col-span-2 pl-4">
             <article className="div_2 text-[#555555] md:mb-0 mb-8">
-              <ul className="md:space-y-5">
+              <ul className="md:space-y-5 space-y-5">
                 <li className="text-black font-inter font-[600]">
                   Useful links
                 </li>
@@ -33,7 +33,7 @@ function Footer() {
               </ul>
             </article>
             <article className="div_3 text-[#555555] md:mb-0 mb-4">
-              <ul className="md:space-y-5">
+              <ul className="md:space-y-5 space-y-5">
                 <li className="text-black font-inter font-[600]">Main Menu</li>
                 <li>Home</li>
                 <li>Offers</li>
@@ -42,7 +42,7 @@ function Footer() {
               </ul>
             </article>
             <article className="div_4 text-[#555555] md:mb-0 mb-4">
-              <ul className="md:space-y-5">
+              <ul className="md:space-y-5 space-y-5">
                 <li className="text-black font-inter font-[600]">Contact Us</li>
                 <li>
                   {" "}
