@@ -46,8 +46,14 @@ function Hero() {
             }}
             ref={sectionRef}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="bg-nachos-bg z-30 bg-no-repeat md:pr-3 lg:pr-0 md:w-[80%] rounded-[20px] mt-4 md:mt-0   bg-cover w-full  center-right-100 lg:h-[500px] h-[400px]"
-          ></motion.div>
+            className="bg-nachos-bg md:bg-none md:bg-transparent z-30 bg-no-repeat md:pr-3 lg:pr-0 md:w-[80%] rounded-[20px] mt-4 md:mt-0 bg-cover w-full center-right-100 lg:h-[500px] h-[400px]"
+          >
+            <img
+              src="/svg/image-removebg-preview (46)_cleanup 1 (1)_prev_ui (6).png"
+              alt="logo_Nachos"
+              className=" w-full  object-contain translate-x-[-60px] pt-7 md:block hidden"
+            />
+          </motion.div>
         </section>
       </main>
     </>
