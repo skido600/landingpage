@@ -4,7 +4,7 @@ function Last_Footer() {
     <>
       <footer className="bg-[#FDF8ECBD] px-4 text-center py-4 mt-4">
         <p className="font-inter">
-          Copyright 2024 All Rights Reserved Company Name.
+          Copyright {new Date().getFullYear()} All Rights Reserved Company Name.
         </p>
         <div className="mt-4">
           <p>
