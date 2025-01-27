@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
@@ -12,6 +12,13 @@ function Nav() {
   const handleClick = (index) => {
     setActiveIndex(index);
   };
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [toggle]);
   const navItems = ["Home", "Menu", "About Us", "Offers"];
   return (
     <>
@@ -32,7 +39,7 @@ function Nav() {
               } px-4 md:space-x-8 fixed md:relative z-20 bg-white md:bg-transparent left-0 right-0 bottom-0 top-0 md:translate-x-0 transition-transform duration-300 transform`}
             >
               <div className="md:hidden" onClick={handle}>
-                <IoMdClose size={30} className="float-right " />
+                <IoMdClose size={30} className="float-right cursor-pointer" />
               </div>
               <ul className="md:flex md:space-y-0 md:text-[14px] md:h-auto h-screen space-y-5 mt-8 text-[40px] items-center px-4 md:space-x-8 absolute md:relative">
                 {navItems.map((item, index) => (
@@ -54,7 +61,7 @@ function Nav() {
             </div>
 
             <div className="md:hidden" onClick={handle}>
-              <IoIosMenu size={40} className="" />
+              <IoIosMenu size={40} className="cursor-pointer" />
             </div>
           </div>
         </nav>
